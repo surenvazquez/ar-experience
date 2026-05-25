@@ -3,42 +3,52 @@ html
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Experiencia AR · Patrimonio Cultural</title>
-  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AR · Patrimonio Cultural · Humanidades Digitales</title>
   <style>
-    body { margin: 0; overflow: hidden; }
-    #back {
-      position: fixed;
-      top: 12px;
-      left: 12px;
-      z-index: 999;
-      background: rgba(0,0,0,0.6);
-      color: white;
-      border: 1px solid rgba(255,255,255,0.3);
-      padding: 6px 14px;
-      font-size: 13px;
-      font-family: Georgia, serif;
-      cursor: pointer;
-      text-decoration: none;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Georgia', serif; background: #0d0d0d; color: #f0ece4; min-height: 100vh; }
+    header { text-align: center; padding: 3rem 1.5rem 2rem; border-bottom: 1px solid #2a2a2a; }
+    header .label { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: #888; margin-bottom: 0.75rem; }
+    header h1 { font-size: 1.8rem; font-weight: normal; line-height: 1.3; }
+    header h1 span { color: #c8a96e; }
+    .intro { max-width: 600px; margin: 2.5rem auto; padding: 0 1.5rem; text-align: center; line-height: 1.8; color: #aaa; }
+    .steps { max-width: 600px; margin: 0 auto 2.5rem; padding: 0 1.5rem; }
+    .steps h2 { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: #888; margin-bottom: 1.25rem; }
+    .step { display: flex; gap: 1rem; margin-bottom: 1rem; align-items: flex-start; }
+    .step-num { flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: #1a1a1a; border: 1px solid #c8a96e; color: #c8a96e; font-size: 0.8rem; display: flex; align-items: center; justify-content: center; }
+    .step p { color: #ccc; font-size: 0.95rem; line-height: 1.5; padding-top: 4px; }
+    .marker-section { max-width: 600px; margin: 0 auto 2.5rem; padding: 0 1.5rem; text-align: center; }
+    .marker-section h2 { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: #888; margin-bottom: 1.25rem; }
+    .marker-section img { width: 220px; height: 220px; border: 12px solid #000; display: block; margin: 0 auto 1rem; background: white; }
+    .marker-section .note { font-size: 0.8rem; color: #666; }
+    .cta { text-align: center; padding: 0 1.5rem 3rem; }
+    .btn { display: inline-block; padding: 0.9rem 2.5rem; background: #c8a96e; color: #0d0d0d; text-decoration: none; font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Georgia', serif; }
+    footer { text-align: center; padding: 2rem; border-top: 1px solid #1a1a1a; font-size: 0.75rem; color: #444; }
   </style>
 </head>
 <body>
-  <a href="index.html" id="back">← Volver</a>
-  <a-scene embedded arjs vr-mode-ui="enabled: false">
-    <a-marker preset="hiro">
-      <a-text
-        value="La realidad aumentada\ntransforma el patrimonio\nen experiencia"
-        position="0 1.2 0"
-        align="center"
-        color="#c8a96e"
-        scale="0.9 0.9 0.9">
-      </a-text>
-      <a-box position="0 0.2 0" scale="0.8 0.4 0.8" color="#1a1a2e" opacity="0.85"></a-box>
-      <a-sphere position="0 0.7 0" radius="0.2" color="#c8a96e"></a-sphere>
-    </a-marker>
-    <a-entity camera></a-entity>
-  </a-scene>
+  <header>
+    <div class="label">Máster en Humanidades Digitales · Interacción Persona-Ordenador</div>
+    <h1>Realidad aumentada y <span>patrimonio cultural</span></h1>
+  </header>
+  <p class="intro">La realidad aumentada superpone información digital sobre el mundo físico en tiempo real. En esta práctica aprenderás a crear experiencias interactivas que transforman objetos del patrimonio cultural en puertas de acceso a nuevo conocimiento.</p>
+  <div class="steps">
+    <h2>Cómo usar esta experiencia</h2>
+    <div class="step"><div class="step-num">1</div><p>Abre esta página en <strong>Chrome</strong> desde tu móvil y acepta el permiso de cámara.</p></div>
+    <div class="step"><div class="step-num">2</div><p>Muestra el marcador (imagen de abajo) en otra pantalla o imprímelo en papel.</p></div>
+    <div class="step"><div class="step-num">3</div><p>Pulsa <strong>"Iniciar experiencia AR"</strong> y apunta la cámara al marcador a unos 40 cm con buena luz.</p></div>
+    <div class="step"><div class="step-num">4</div><p>Observa cómo el espacio físico y el digital convergen.</p></div>
+  </div>
+  <div class="marker-section">
+    <h2>Marcador</h2>
+    <img src="https://raw.githubusercontent.com/AR-js-org/AR.js/master/data/images/hiro.png" alt="Marcador Hiro">
+    <p class="note">Muestra esta imagen en pantalla o imprímela.</p>
+  </div>
+  <div class="cta">
+    <a class="btn" href="ar.html">Iniciar experiencia AR</a>
+  </div>
+  <footer>Humanidades Digitales · Práctica de Realidad Aumentada</footer>
 </body>
 </html>
+
