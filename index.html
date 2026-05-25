@@ -10,9 +10,9 @@ html
   </head>
   <body style="margin:0; overflow:hidden;">
     <a-scene embedded arjs>
-      <a-marker preset="hiro">
+      <a-marker type="pattern" url="suren_marker.patt">
         <a-text value="Hola, Suren" position="0 0.5 0" align="center" color="white" scale="2 2 2"></a-text>
-        <a-box position="0 -0.5 0" color="tomato" scale="1 1 1"></a-box>
+        <a-box position="0 -0.5 0" color="tomato"></a-box>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
