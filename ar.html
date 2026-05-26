@@ -21,35 +21,46 @@
 
   <a-scene embedded arjs vr-mode-ui="enabled: false">
 
-    <a-assets>
+    <a-assets timeout="10000">
       <img id="dimoni" src="DimoniBN.jpg">
       <audio id="dimoni-sound" src="dimoni_audio.mp3" preload="auto"></audio>
+      <video id="correfoc-video"
+        src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Correfocs_Girona_2015.ogv"
+        autoplay loop crossorigin="anonymous" playsinline muted>
+      </video>
     </a-assets>
 
     <a-marker preset="hiro">
 
+      <!-- Imagen del Dimoni -->
       <a-image
         src="#dimoni"
-        position="0 1.2 0"
-        width="1.5"
-        height="2"
+        position="-0.9 1.2 0"
+        width="1.2"
+        height="1.6"
         rotation="-90 0 0">
       </a-image>
 
+      <!-- Vídeo correfoc -->
+      <a-video
+        src="#correfoc-video"
+        position="0.9 0.8 0"
+        width="1.5"
+        height="0.85"
+        rotation="-90 0 0">
+      </a-video>
+
+      <!-- Texto -->
       <a-text
         value="El dimoni i la pedra\nPatrimoni Cultural"
-        position="0 0.3 0"
+        position="0 0.25 0"
         align="center"
         color="#c8a96e"
-        scale="0.6 0.6 0.6">
+        scale="0.55 0.55 0.55">
       </a-text>
 
-      <a-sound
-        src="#dimoni-sound"
-        autoplay="true"
-        loop="true"
-        position="0 0 0">
-      </a-sound>
+      <!-- Audio -->
+      <a-sound src="#dimoni-sound" autoplay="true" loop="true" position="0 0 0"></a-sound>
 
     </a-marker>
     <a-entity camera></a-entity>
