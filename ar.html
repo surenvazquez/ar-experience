@@ -27,29 +27,28 @@
   <a href="index.html" id="back">← Volver</a>
 
   <a-scene embedded arjs vr-mode-ui="enabled: false">
+
+    <a-assets>
+      <img id="dimoni" src="DimoniBN.jpg">
+    </a-assets>
+
     <a-marker preset="hiro">
 
-      <a-text
-        value="La realidad aumentada\ntransforma el patrimonio\nen experiencia"
+      <a-image
+        src="#dimoni"
         position="0 1.2 0"
+        width="1.5"
+        height="2"
+        rotation="-90 0 0">
+      </a-image>
+
+      <a-text
+        value="El dimoni i la pedra\nPatrimoni Cultural"
+        position="0 0.3 0"
         align="center"
         color="#c8a96e"
-        scale="0.9 0.9 0.9"
-        line-height="1.4">
+        scale="0.6 0.6 0.6">
       </a-text>
-
-      <a-box
-        position="0 0.2 0"
-        scale="0.8 0.4 0.8"
-        color="#1a1a2e"
-        opacity="0.85">
-      </a-box>
-
-      <a-sphere
-        position="0 0.7 0"
-        radius="0.2"
-        color="#c8a96e">
-      </a-sphere>
 
     </a-marker>
     <a-entity camera></a-entity>
